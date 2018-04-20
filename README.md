@@ -3,7 +3,7 @@
 The shopping cart SPA for custom made guitars. Made in AngularJS.
 
 # Code Features
-1. Has a custom derivative element to display the Hero panel of Guitars which randomly loads different guitar from dataset. This tag is known as `<random-guitar-panel></random-guitar-panel>`. It has an attribute `guitars` which takes input as a Data Model Object.
+1. Has a custom derivative element to display the Hero panel of Guitars which randomly loads different guitar from dataset whenever the view is loaded again. This tag is known as `<random-guitar-panel></random-guitar-panel>`. It has an attribute `guitars` which takes input as a Data Model Object.
 
 2. Has another custom derivative element `<guitar-display></guitar-display>`. It also has an attribute `gdata` which also takes Data Model Object as an Input. This element is used to display guitar items in a form of card view.
 
