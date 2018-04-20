@@ -1,0 +1,10 @@
+<div class="jumbotron jumbotron-fluid" style="background-image: url('assets/svg/nav-bk.svg'); background-size: cover;">
+  <div class="container text-center" >
+    <h3 class="display-4">{{ guitars[pickrandom].name }}</h3>
+
+    	<img ng-src="{{guitars[pickrandom].img}}" style="width: 80%; padding: 10px;" class="mx-auto d-block"></<img>
+
+    <p class="lead">Handcrafted With {{ guitars[pickrandom].wood }} woods</p>
+    <a ng-href="view/{{guitars[pickrandom].id}}" class="btn btn-outline-dark btn-lg">View Specifications</a>
+  </div>
+</div>

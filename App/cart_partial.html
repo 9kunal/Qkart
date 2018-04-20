@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-md-8" style="margin-top: 50px; ">
+            <div ng-if="cart == null" style="width: 100%; text-align: center;"><span class="text-center">The cart is empty! did you saw some of our works..?</span>
+                <h1 class="display-1" style="margin-top: 10px;">🤗</h1>
+            </div>
+            <div ng-if="cart != null" class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="i in cart" valign="center">
+                            <td><i ng-click="removeItem(i.id)" class="fi-x" style="cursor: pointer; color: #990000;"></i></td>
+                            <th scope="row">{{$index + 1}}</th>
+                            <td><a ng-href="/view/{{i.id}}">{{i.name}}</a></td>
+                            <td>Rs. {{i.price}}</td>
+                            <td><i class="fi-plus" ng-click="i.quantity = i.quantity + 1" style="cursor: pointer;"></i>&nbsp;&nbsp; {{i.quantity}} &nbsp;&nbsp;<i ng-if="i.quantity > 1" ng-click="i.quantity = i.quantity - 1" class="fi-minus" style="cursor: pointer;"></i></td>
+                            <td>Rs. {{ i.price * i.quantity }}</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <th>Tax: Rs. {{ getTax() }} ( 15% )</th>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <th>Total: Rs. {{ getTotal() + getTax() }}/-</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

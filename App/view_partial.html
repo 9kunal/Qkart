@@ -1,0 +1,27 @@
+<div class="container">
+    <h3 style="margin-top: 10px;">{{_guitarOne_.name}}</h3>
+    <div class="row" style="margin-top: 50px;">
+        <div class="col-md-6">
+            <div class="imagewrap">
+                <img ng-src="{{ _guitarOne_.img}}" alt="" class="img-fluid">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <ul>
+                <li> Made with: {{ _guitarOne_.wood}} </li>
+                <li> Surface finish: {{ _guitarOne_.surface}} </li>
+            </ul>
+        </div>
+        <div class="w-100"></div>
+        <div class="col-md-6"></div>
+        <div class="col-md-6"><h1 style="padding-left: 40px;" class="display-4">Rs. {{ _guitarOne_.price}} /-</h1></div>
+        <div class="w-100" style="margin-top: 10px;"></div>
+        <div class="col-md-6"></div>
+        <div class="col-md-6">
+        	
+        	<button ng-if="btn_state == false" ng-click="addToCart()" type="button" class="btn btn-info btn-lg btn-block"><i class="fi-cart"></i> Add to cart</button>
+
+        	<button ng-if="btn_state == true"  type="button" class="btn btn-success btn-lg btn-block" disabled=""><i class="fi-check"></i> Added to the Cart</button>
+
+        </div>
+</div>
