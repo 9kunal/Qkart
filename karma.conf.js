@@ -44,7 +44,7 @@ module.exports = function(config) {
     port: 9876,
 
 
-    //browsers: ['Chrome'], if have chrome install then enable this
+    browsers: ['Chrome'], //if have chrome install then enable this
 
     // enable / disable colors in the output (reporters and logs)
     colors: true,
