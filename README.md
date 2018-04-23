@@ -11,16 +11,25 @@ The shopping cart SPA for custom made guitars. Made in AngularJS.
 
 4. The app does not require any Database as all data is seeded in a Guitars.json file in the DataStore directory. 
 
-# Installation
+# Installation and RUN.
 
 * Requires Nodejs and npm to install, build, test and run.
 
 1. Clone the repo.
 2. Enter `npm install` into the directory.
+3. Enter `npm start` to start the local http server.
+
+NOTE: If you are using `npm start` command please make sure you have Node version <= 7.6.0. Else you can start the local web server using the gulp as written below.
 
 # Build, Test and Run
 
-1. Enter `gulp` to start.
+1. Enter `npm start` to start the local http server.
+
+OR
+
+1. Also, you can use gulp but make sure you have gulp-cli installed globally. To install gulp-cli globally use following command.
+`npm install gulp-cli -g`
+2. And then you can run `gulp` from the repo's base directory.
 
 # Test
 
