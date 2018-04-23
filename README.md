@@ -33,7 +33,7 @@ OR
 
 # Test
 
-1. Enter `karma start` into the base directory.
+1. Enter `npm test` into the base directory. Or you can enter `karma start` into the base directory.
 2. If chrome not installed then paste the link from console to the browser inorder to connect to Karma Server.
 
 # Notes
