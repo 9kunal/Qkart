@@ -4,7 +4,7 @@ app.directive('guitarDisplay', [function() {
         scope: {
         	gdata: '='
         },
-        templateUrl: './displayCard_partial.html',
+        templateUrl: './App/displayCard_partial.html',
         controller: function($scope){}
     };
 }]);

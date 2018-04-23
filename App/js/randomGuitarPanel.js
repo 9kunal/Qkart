@@ -4,7 +4,7 @@ app.directive('randomGuitarPanel', [function() {
         scope: {
         	guitars: '='
         },
-        templateUrl: './randomGuitar_partial.html',
+        templateUrl: './App/randomGuitar_partial.html',
         controller: function($scope){
         	$scope.pickrandom = Math.floor(Math.random() * 6);
         }

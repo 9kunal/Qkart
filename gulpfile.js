@@ -2,24 +2,25 @@
  var browserSync = require('browser-sync').create();
  var KarmaServer = require('karma').Server;
 
-  gulp.task('RunTest', function(done) {
+ gulp.task('RunTest', function(done) {
      new KarmaServer({
          configFile: __dirname + '/karma.conf.js',
          singleRun: true
      }, done).start();
- }); 
+ });
 
- gulp.task('Serve',['RunTest'],function() {
+ gulp.task('Serve',['RunTest'] ,function() {
      browserSync.init({
          server: {
-             baseDir: "./App",
+             //baseDir: "./",
+             index: "./App/index.html"
              // The key is the url to match
              // The value is which folder to serve (relative to your current working directory)
-             routes: {
+             /*routes: {
                  "/node_modules": "node_modules",
                  "/assets": "assets",
                  "/DataStore": "DataStore"
-             }
+             }*/
          },
          online: true
      });

@@ -2,20 +2,20 @@ var app = angular.module('qApp', ["ngRoute", 'ngStorage']);
 
 app.config(function($routeProvider, $locationProvider) {
     $routeProvider
-    .when("/", {
-        templateUrl : "shop_partial.html",
+    .when("/App", {
+        templateUrl : "./App/shop_partial.html",
         controller: "shopController"
     })
     .when("/view/:ID", {
-        templateUrl : "view_partial.html",
+        templateUrl : "./App/view_partial.html",
         controller: "viewController"
     })
     .when("/cart", {
-        templateUrl : "cart_partial.html",
+        templateUrl : "./App/cart_partial.html",
         controller: 'cartController'
     })
     .otherwise({
-        redirectTo: '/'
+        redirectTo: '/App'
     });
 
     $locationProvider.html5Mode(true);
